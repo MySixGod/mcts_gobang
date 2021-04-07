@@ -87,6 +87,6 @@ class Game(object):
 
 
 if __name__ == '__main__':
-    b = Board(19, 19, 5)
+    b = Board()
     g = Game(b, {"max_calc_time": 5, "max_actions": 10000})
     g.start()
