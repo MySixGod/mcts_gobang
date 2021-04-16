@@ -47,11 +47,11 @@ class Game(object):
         p1, p2 = self.init_player()
         self.board.init_board()
 
-        ai = MCTS(self.board, [p1, p2], self.n_in_row, self.time, self.max_actions)
+        ai = MCTS(self.board, [p1, p2])
         human = Human(self.board, p2)
         players = {p1: ai, p2: human}
         turn = [p2, p1]
-        shuffle(turn)  # 玩家和电脑的出手顺序随机
+        # shuffle(turn)  # 玩家和电脑的出手顺序随机
         while True:
             p = turn.pop(0)
             turn.append(p)
